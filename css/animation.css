@@ -1,0 +1,441 @@
+/* =====================================================
+   SPIN
+===================================================== */
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* =====================================================
+   FLOAT
+===================================================== */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.hero-image{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+/* =====================================================
+   FADE UP
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-left{
+
+    animation:fadeUp 1s ease;
+
+}
+
+/* =====================================================
+   FADE RIGHT
+===================================================== */
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.about-content{
+
+    animation:fadeRight 1s ease;
+
+}
+
+/* =====================================================
+   FADE LEFT
+===================================================== */
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.about-image{
+
+    animation:fadeLeft 1s ease;
+
+}
+
+/* =====================================================
+   GLOW
+===================================================== */
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 15px rgba(56,189,248,.25);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 35px rgba(56,189,248,.6);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 15px rgba(56,189,248,.25);
+
+    }
+
+}
+
+.btn{
+
+    animation:glow 2.5s infinite;
+
+}
+
+/* =====================================================
+   CARD HOVER
+===================================================== */
+
+.skill-card,
+.project-card,
+.stat-card,
+.timeline-item{
+
+    transition:
+    transform .4s,
+    box-shadow .4s,
+    border-color .4s;
+
+}
+
+.skill-card:hover,
+.project-card:hover,
+.stat-card:hover,
+.timeline-item:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+}
+
+/* =====================================================
+   GRADIENT BACKGROUND
+===================================================== */
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+body{
+
+    background-size:250% 250%;
+
+    animation:gradientMove 15s ease infinite;
+
+}
+
+/* =====================================================
+   ICON BOUNCE
+===================================================== */
+
+.socials a:hover{
+
+    animation:bounce .5s;
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* =====================================================
+   BUTTON RIPPLE
+===================================================== */
+
+.btn,
+.btn-outline{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before,
+.btn-outline::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.25);
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.6s;
+
+}
+
+.btn:hover::before,
+.btn-outline:hover::before{
+
+    width:350px;
+
+    height:350px;
+
+}
+
+/* =====================================================
+   IMAGE ZOOM
+===================================================== */
+
+.project-card{
+
+    overflow:hidden;
+
+}
+
+.project-card img{
+
+    transition:transform .6s;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* =====================================================
+   TITLE ANIMATION
+===================================================== */
+
+.section-title{
+
+    position:relative;
+
+}
+
+.section-title::after{
+
+    animation:expandLine 3s infinite;
+
+}
+
+@keyframes expandLine{
+
+    0%{
+
+        width:0;
+
+    }
+
+    50%{
+
+        width:80px;
+
+    }
+
+    100%{
+
+        width:0;
+
+    }
+
+}
+
+/* =====================================================
+   SCROLL TO TOP BUTTON
+===================================================== */
+
+#scrollTop{
+
+    transition:.35s;
+
+}
+
+#scrollTop:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* =====================================================
+   NAVBAR LINK
+===================================================== */
+
+nav ul li a{
+
+    position:relative;
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================================
+   MOBILE MENU
+=========================================== */
+
+@keyframes menuFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

@@ -1,0 +1,406 @@
+/* ===========================================
+   LARGE SCREENS (1400px and below)
+=========================================== */
+
+@media (max-width:1400px){
+
+    .hero-left h1{
+        font-size:64px;
+    }
+
+    .hero-image{
+        width:380px;
+    }
+
+}
+
+
+/* ===========================================
+   LAPTOPS (1200px)
+=========================================== */
+
+@media (max-width:1200px){
+
+    section{
+
+        padding:100px 8%;
+
+    }
+
+    .hero-left h1{
+
+        font-size:58px;
+
+    }
+
+    .hero-left h2{
+
+        font-size:30px;
+
+    }
+
+    .hero-image{
+
+        width:340px;
+
+    }
+
+    .about-container{
+
+        grid-template-columns:300px 1fr;
+
+        gap:50px;
+
+    }
+
+}
+
+
+/* ===========================================
+   TABLETS (992px)
+=========================================== */
+
+@media (max-width:992px){
+
+    nav{
+
+        padding:16px 25px;
+
+    }
+
+    nav ul{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+        cursor:pointer;
+
+    }
+
+    #home{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:50px;
+
+    }
+
+    .hero-desc{
+
+        margin:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-image{
+
+        width:300px;
+
+    }
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .about-image{
+
+        width:300px;
+
+        margin:auto;
+
+    }
+
+    .stats{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .timeline::before{
+
+        left:20px;
+
+    }
+
+    .timeline-item{
+
+        width:calc(100% - 60px);
+
+        margin-left:60px !important;
+
+    }
+
+    .timeline-item::after{
+
+        left:-50px !important;
+
+    }
+
+}
+
+
+/* ===========================================
+   MOBILE (768px)
+=========================================== */
+
+@media (max-width:768px){
+
+    section{
+
+        padding:90px 7%;
+
+    }
+
+    .section-title{
+
+        font-size:34px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:44px;
+
+    }
+
+    .hero-left h2{
+
+        font-size:24px;
+
+    }
+
+    .hero-desc{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .btn,
+    .btn-outline{
+
+        width:220px;
+
+        text-align:center;
+
+    }
+
+    .hero-image{
+
+        width:250px;
+
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .skills-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .project-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-container button{
+
+        width:100%;
+
+    }
+
+}
+
+
+/* ===========================================
+   SMALL MOBILE (480px)
+=========================================== */
+
+@media (max-width:480px){
+
+    nav{
+
+        width:95%;
+
+        padding:15px 20px;
+
+    }
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:36px;
+
+    }
+
+    .hero-left h2{
+
+        font-size:20px;
+
+    }
+
+    .hero-image{
+
+        width:200px;
+
+    }
+
+    .section-title{
+
+        font-size:30px;
+
+    }
+
+    .skills-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .timeline-item{
+
+        padding:20px;
+
+    }
+
+    footer{
+
+        padding:30px 7%;
+
+    }
+
+    .socials{
+
+        gap:12px;
+
+    }
+
+    .socials a{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:18px;
+
+    }
+
+}
+
+
+/* ===========================================
+   VERY SMALL DEVICES
+=========================================== */
+
+@media (max-width:360px){
+
+    .hero-left h1{
+
+        font-size:30px;
+
+    }
+
+    .hero-left h2{
+
+        font-size:18px;
+
+    }
+
+    .hero-desc{
+
+        font-size:15px;
+
+    }
+
+    .btn,
+    .btn-outline{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===========================================
+   MOBILE NAVIGATION
+=========================================== */
+
+@media (max-width:992px){
+
+    nav{
+
+        position:relative;
+
+    }
+
+    nav ul{
+
+        position:absolute;
+
+        top:90px;
+
+        left:0;
+
+        width:100%;
+
+        background:rgba(5,8,22,.98);
+
+        backdrop-filter:blur(20px);
+
+        border-radius:20px;
+
+        display:none;
+
+        flex-direction:column;
+
+        padding:25px;
+
+        gap:25px;
+
+        border:1px solid rgba(255,255,255,.08);
+
+    }
+
+    nav ul.show{
+
+        display:flex;
+
+        animation:menuFade .35s ease;
+
+    }
+
+}
